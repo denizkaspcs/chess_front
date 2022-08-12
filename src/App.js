@@ -18,7 +18,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const newSocket = io(`http://${window.location.hostname}:8080`);
+    const newSocket = io(`https://dk-chess-back.herokuapp.com/`);
     setSocket(newSocket);
     return () => newSocket.close();
   },[setSocket])
